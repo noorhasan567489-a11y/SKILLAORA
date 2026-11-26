@@ -1,117 +1,160 @@
-📚
-NHSH
-Learn · Practice · Excel
-Home
-Study Material
-PYQs
-Mock Tests
-About
-Contact
-Explore
-Your learning journey starts here
-Smart Learning,
-Bright Future.
-Your one-stop destination for notes, video lectures, slides, previous-year questions, mock tests and much more. Learn at your own pace, anytime, anywhere.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHSH | Smart Learning</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f4f7fc;color:#14213d}
+header{background:#061b49;color:white;padding:18px 7%;
+display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:28px;font-weight:bold}
+.logo span{color:#ffcf00}
+nav a{color:white;text-decoration:none;margin:10px;font-weight:bold}
+nav a:hover{color:#ffcf00}
+.hero{padding:75px 7%;background:linear-gradient(120deg,#061b49,#0875ff);
+color:white;text-align:center}
+.hero h1{font-size:45px;margin-bottom:15px}
+.hero h1 span{color:#ffcf00}
+.hero p{font-size:18px;margin:15px}
+.btn{display:inline-block;background:#ffcf00;color:#061b49;padding:14px 25px;
+border-radius:30px;text-decoration:none;font-weight:bold;margin-top:20px}
+.features{padding:45px 7%;text-align:center}
+.features h2{font-size:32px;margin-bottom:10px}
+.features>p{color:#64748b;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px}
+.card{background:white;padding:25px;border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-7px)}
+.card .icon{font-size:40px}
+.card h3{margin:15px 0;color:#0757c8}
+.card p{color:#64748b;margin-bottom:15px}
+.card a{display:inline-block;background:#0757c8;color:white;
+padding:10px 18px;border-radius:25px;text-decoration:none}
+.about{background:#061b49;color:white;padding:45px 7%;text-align:center}
+.about h2{color:#ffcf00;margin-bottom:15px}
+footer{background:#03112e;color:white;text-align:center;padding:20px}
+.search{margin:20px auto;max-width:500px}
+.search input{width:100%;padding:15px;border-radius:30px;
+border:2px solid #ddd;font-size:16px}
+</style>
+</head>
+<body>
 
-▶ Start Learning Free
-✦ Why NHSH?
-✦ STUDY SMART. DREAM BIG.
-Your goals.
-Your pace.
-✎
-▶
-📖
-🚀 Small steps every day lead to big success!
-⚡
-Free Resources
-Learn without limits
-▶️
-Easy Learning
-Clear study material
-⬇️
-Study Anywhere
-Save & revise anytime
-🎓
-For Every Learner
-School & exam prep
-Explore Our Resources
-Everything you need to learn, practice and excel.
+<header>
+<div class="logo">🎓 NHSH<span>.</span></div>
+<nav>
+<a href="#">Home</a>
+<a href="#resources">Study Material</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-Search notes, lectures, PYQs...
-Search
-📝
-Notes
-Well-organized notes for quick learning and revision.
+<section class="hero">
+<h1>Smart Learning, <span>Bright Future!</span></h1>
+<p>Your One-Stop Destination for Online Education</p>
+<p>Notes, Lectures, Slides, PYQs, Mock Tests and much more!</p>
+<p>Learn Anytime, Anywhere 🚀</p>
+<a href="#resources" class="btn">Start Learning Free →</a>
+</section>
 
-Explore Notes →
-🎥
-Video Lectures
-Understand concepts with engaging lessons.
+<section class="features" id="resources">
+<h2>📚 Explore Our Resources</h2>
+<p>Everything you need to learn, practice and excel.</p>
 
-Watch Lectures →
-📊
-Slides
-Presentation-style summaries for visual learners.
+<div class="search">
+<input type="text" id="search" placeholder="🔍 Search Notes, Lectures, PYQs..." onkeyup="searchCards()">
+</div>
 
-Explore Slides →
-📄
-Previous Year Questions
-Practice past questions and learn exam patterns.
+<div class="cards">
 
-View PYQs →
-✅
-Mock Tests
-Test your understanding and build confidence.
+<div class="card">
+<div class="icon">📝</div>
+<h3>Notes</h3>
+<p>Easy and well-prepared study notes.</p>
+<a href="#">Explore Notes</a>
+</div>
 
-Start Practice →
-📚
-E-Books
-Digital books and useful reading resources.
+<div class="card">
+<div class="icon">🎥</div>
+<h3>Video Lectures</h3>
+<p>Learn concepts through video lessons.</p>
+<a href="#">Watch Lectures</a>
+</div>
 
-Browse Books →
-💡
-Study Tips
-Simple strategies to make study time effective.
+<div class="card">
+<div class="icon">📊</div>
+<h3>Slides</h3>
+<p>Presentation slides for smart revision.</p>
+<a href="#">View Slides</a>
+</div>
 
-Learn More →
-🔔
-Updates
-Stay informed about new study resources.
+<div class="card">
+<div class="icon">📄</div>
+<h3>PYQs</h3>
+<p>Previous year question papers.</p>
+<a href="#">Practice PYQs</a>
+</div>
 
-Stay Updated →
-🤝
-Student Community
-Learning is better when we grow together.
+<div class="card">
+<div class="icon">🎯</div>
+<h3>Mock Tests</h3>
+<p>Test your knowledge and prepare better.</p>
+<a href="#">Start Test</a>
+</div>
 
-Connect →
-Learning made simple
-Why Choose NHSH?
-We believe quality learning resources should be easy to discover and accessible to students. NHSH is designed to help learners organize their study, practice regularly and keep moving towards their goals.
+<div class="card">
+<div class="icon">📚</div>
+<h3>E-Books</h3>
+<p>Useful books and learning resources.</p>
+<a href="#">Explore Books</a>
+</div>
 
-Student-friendly and simple design
-Organized learning resources
-Practice-focused approach
-Learn at your own pace
-“The beautiful thing about learning is that no one can take it away from you.”
-Keep curious. Keep learning. Keep growing.
-∞
-Learning Opportunities
-24/7
-Learn at Your Pace
-1
-Learning Destination
-100%
-Student Focus
-Join the NHSH Learning Community
-Explore resources, practice consistently and make every study session count.
+<div class="card">
+<div class="icon">💡</div>
+<h3>Study Tips</h3>
+<p>Tips and strategies for effective learning.</p>
+<a href="#">Read Tips</a>
+</div>
 
-Explore Resources →
-Contact & Contributions
-Want to share resources, suggest an idea or collaborate?
+<div class="card">
+<div class="icon">🏆</div>
+<h3>Practice</h3>
+<p>Improve your knowledge with practice.</p>
+<a href="#">Start Practice</a>
+</div>
 
-Replace this text with your contact email: hello@example.com
+</div>
+</section>
 
-Please update the email address in this file before publishing.
+<section class="about" id="about">
+<h2>Why Choose NHSH?</h2>
+<p>✔ Free Learning Resources</p>
+<p>✔ Simple and Student-Friendly</p>
+<p>✔ Notes, Lectures and Practice</p>
+<p>✔ Learn at Your Own Pace</p>
+<p>✔ Your Success is Our Mission 🚀</p>
+</section>
 
-NHSH · Learn · Practice · Excel
-© 2026 NHSH. Keep learning, keep growing.
+<footer id="contact">
+<h3>🎓 NHSH – Learn • Practice • Excel</h3>
+<p>Learn Today... Lead Tomorrow!</p>
+<p>© 2026 NHSH | All Rights Reserved</p>
+</footer>
+
+<script>
+function searchCards(){
+let input=document.getElementById("search").value.toLowerCase();
+let cards=document.querySelectorAll(".card");
+cards.forEach(card=>{
+let text=card.innerText.toLowerCase();
+card.style.display=text.includes(input)?"block":"none";
+});
+}
+</script>
+
+</body>
+</html>
