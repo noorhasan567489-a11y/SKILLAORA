@@ -4,155 +4,475 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NHSH | Smart Learning</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#f4f7fc;color:#14213d}
-header{background:#061b49;color:white;padding:18px 7%;
-display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo{font-size:28px;font-weight:bold}
-.logo span{color:#ffcf00}
-nav a{color:white;text-decoration:none;margin:10px;font-weight:bold}
-nav a:hover{color:#ffcf00}
-.hero{padding:75px 7%;background:linear-gradient(120deg,#061b49,#0875ff);
-color:white;text-align:center}
-.hero h1{font-size:45px;margin-bottom:15px}
-.hero h1 span{color:#ffcf00}
-.hero p{font-size:18px;margin:15px}
-.btn{display:inline-block;background:#ffcf00;color:#061b49;padding:14px 25px;
-border-radius:30px;text-decoration:none;font-weight:bold;margin-top:20px}
-.features{padding:45px 7%;text-align:center}
-.features h2{font-size:32px;margin-bottom:10px}
-.features>p{color:#64748b;margin-bottom:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px}
-.card{background:white;padding:25px;border-radius:16px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s}
-.card:hover{transform:translateY(-7px)}
-.card .icon{font-size:40px}
-.card h3{margin:15px 0;color:#0757c8}
-.card p{color:#64748b;margin-bottom:15px}
-.card a{display:inline-block;background:#0757c8;color:white;
-padding:10px 18px;border-radius:25px;text-decoration:none}
-.about{background:#061b49;color:white;padding:45px 7%;text-align:center}
-.about h2{color:#ffcf00;margin-bottom:15px}
-footer{background:#03112e;color:white;text-align:center;padding:20px}
-.search{margin:20px auto;max-width:500px}
-.search input{width:100%;padding:15px;border-radius:30px;
-border:2px solid #ddd;font-size:16px}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+body{
+    background:#f5f8ff;
+    color:#172554;
+}
+header{
+    background:#071a45;
+    color:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+.logo{
+    font-size:27px;
+    font-weight:bold;
+}
+.logo span{color:#ffc928}
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{color:#ffc928}
+
+.hero{
+    background:linear-gradient(135deg,#071a45,#1268ee);
+    color:white;
+    padding:90px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.hero-text{
+    flex:1;
+    min-width:280px;
+}
+.hero-text h1{
+    font-size:48px;
+    line-height:1.2;
+    margin:15px 0;
+}
+.hero-text h1 span{color:#ffc928}
+.hero-text p{
+    font-size:17px;
+    line-height:1.8;
+    color:#e0eaff;
+}
+.tag{
+    display:inline-block;
+    background:#ffffff20;
+    padding:10px 18px;
+    border-radius:30px;
+    color:#ffc928;
+}
+.btn{
+    display:inline-block;
+    background:#ffc928;
+    color:#071a45;
+    padding:15px 25px;
+    margin-top:25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+.btn:hover{transform:scale(1.05)}
+.hero-art{
+    flex:1;
+    min-width:280px;
+    max-width:450px;
+    background:white;
+    border-radius:30px;
+    padding:30px;
+    color:#071a45;
+    text-align:center;
+    box-shadow:0 20px 50px #0003;
+}
+.hero-art .big{font-size:90px}
+.hero-art h2{margin:15px}
+.hero-art p{color:#64748b;line-height:1.7}
+.hero-art .mini{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+.mini div{
+    background:#eef4ff;
+    padding:15px;
+    flex:1;
+    border-radius:15px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:20px;
+    padding:35px 8%;
+}
+.stat{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px #00000008;
+}
+.stat h2{color:#1268ee;font-size:28px}
+.stat p{margin-top:8px;color:#64748b}
+
+.section{
+    padding:65px 8%;
+}
+.section-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+.section-heading h2{
+    font-size:35px;
+    margin-bottom:12px;
+}
+.section-heading p{color:#64748b}
+
+.search-box{
+    max-width:600px;
+    margin:0 auto 35px;
+}
+.search-box input{
+    width:100%;
+    padding:16px 20px;
+    border:2px solid #e0e7ff;
+    border-radius:30px;
+    outline:none;
+    font-size:16px;
+}
+.search-box input:focus{border-color:#1268ee}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
+}
+.card{
+    background:white;
+    border-radius:22px;
+    padding:28px;
+    border:1px solid #e8edfa;
+    box-shadow:0 10px 25px #00000008;
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 30px #1268ee15;
+}
+.icon{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    background:#eaf1ff;
+}
+.card h3{margin:18px 0 10px;font-size:22px}
+.card p{color:#64748b;line-height:1.7}
+.card a{
+    display:inline-block;
+    margin-top:20px;
+    color:#1268ee;
+    text-decoration:none;
+    font-weight:bold;
+}
+.card a:hover{color:#071a45}
+
+.why{
+    background:#071a45;
+    color:white;
+}
+.why .section-heading p{color:#d1dcf8}
+.why .card{background:#102858;border:1px solid #263e70}
+.why .card h3{color:#ffc928}
+.why .card p{color:#d1dcf8}
+
+.quote{
+    background:#eaf1ff;
+    border-radius:25px;
+    padding:45px;
+    text-align:center;
+    margin-top:30px;
+}
+.quote h2{font-size:28px;margin-bottom:15px}
+.quote p{color:#64748b;line-height:1.8}
+
+.contact{
+    background:#ffffff;
+    text-align:center;
+}
+.contact p{
+    color:#64748b;
+    line-height:1.8;
+}
+footer{
+    background:#03112e;
+    color:white;
+    padding:30px 8%;
+    text-align:center;
+}
+footer p{margin-top:10px;color:#cbd5e1}
+
+@media(max-width:700px){
+    header{justify-content:center;text-align:center}
+    nav{justify-content:center}
+    .hero{text-align:center;padding:60px 6%}
+    .hero-text h1{font-size:36px}
+    .hero-art{margin:auto}
+    .section{padding:50px 6%}
+    .section-heading h2{font-size:28px}
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">🎓 NHSH<span>.</span></div>
-<nav>
-<a href="#">Home</a>
-<a href="#resources">Study Material</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+    <div class="logo">📚 NHSH<span>.</span></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#resources">Study Material</a>
+        <a href="#pyqs">PYQs</a>
+        <a href="#tests">Mock Tests</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="hero">
-<h1>Smart Learning, <span>Bright Future!</span></h1>
-<p>Your One-Stop Destination for Online Education</p>
-<p>Notes, Lectures, Slides, PYQs, Mock Tests and much more!</p>
-<p>Learn Anytime, Anywhere 🚀</p>
-<a href="#resources" class="btn">Start Learning Free →</a>
+<section class="hero" id="home">
+    <div class="hero-text">
+        <div class="tag">✦ STUDY SMART. DREAM BIG.</div>
+        <h1>Smart Learning,<br><span>Bright Future.</span></h1>
+        <p>
+        Your one-stop destination for notes, video lectures,
+        slides, previous-year questions, mock tests and much more.
+        Learn at your own pace, anytime, anywhere.
+        </p>
+        <a href="#resources" class="btn">🚀 Start Learning Free</a>
+    </div>
+
+    <div class="hero-art">
+        <div class="big">🎓</div>
+        <h2>Why NHSH?</h2>
+        <p>Small steps every day lead to big success!</p>
+        <div class="mini">
+            <div>📚<br><b>Learn</b></div>
+            <div>✏️<br><b>Practice</b></div>
+            <div>🏆<br><b>Excel</b></div>
+        </div>
+    </div>
 </section>
 
-<section class="features" id="resources">
-<h2>📚 Explore Our Resources</h2>
-<p>Everything you need to learn, practice and excel.</p>
-
-<div class="search">
-<input type="text" id="search" placeholder="🔍 Search Notes, Lectures, PYQs..." onkeyup="searchCards()">
-</div>
-
-<div class="cards">
-
-<div class="card">
-<div class="icon">📝</div>
-<h3>Notes</h3>
-<p>Easy and well-prepared study notes.</p>
-<a href="#">Explore Notes</a>
-</div>
-
-<div class="card">
-<div class="icon">🎥</div>
-<h3>Video Lectures</h3>
-<p>Learn concepts through video lessons.</p>
-<a href="#">Watch Lectures</a>
-</div>
-
-<div class="card">
-<div class="icon">📊</div>
-<h3>Slides</h3>
-<p>Presentation slides for smart revision.</p>
-<a href="#">View Slides</a>
-</div>
-
-<div class="card">
-<div class="icon">📄</div>
-<h3>PYQs</h3>
-<p>Previous year question papers.</p>
-<a href="#">Practice PYQs</a>
-</div>
-
-<div class="card">
-<div class="icon">🎯</div>
-<h3>Mock Tests</h3>
-<p>Test your knowledge and prepare better.</p>
-<a href="#">Start Test</a>
-</div>
-
-<div class="card">
-<div class="icon">📚</div>
-<h3>E-Books</h3>
-<p>Useful books and learning resources.</p>
-<a href="#">Explore Books</a>
-</div>
-
-<div class="card">
-<div class="icon">💡</div>
-<h3>Study Tips</h3>
-<p>Tips and strategies for effective learning.</p>
-<a href="#">Read Tips</a>
-</div>
-
-<div class="card">
-<div class="icon">🏆</div>
-<h3>Practice</h3>
-<p>Improve your knowledge with practice.</p>
-<a href="#">Start Practice</a>
-</div>
-
-</div>
+<section class="stats">
+    <div class="stat">
+        <h2>⚡ Free</h2>
+        <p>Learning Resources</p>
+    </div>
+    <div class="stat">
+        <h2>▶️ Easy</h2>
+        <p>Learning Experience</p>
+    </div>
+    <div class="stat">
+        <h2>⬇️ Anytime</h2>
+        <p>Study Anywhere</p>
+    </div>
+    <div class="stat">
+        <h2>🎓 All</h2>
+        <p>Types of Learners</p>
+    </div>
 </section>
 
-<section class="about" id="about">
-<h2>Why Choose NHSH?</h2>
-<p>✔ Free Learning Resources</p>
-<p>✔ Simple and Student-Friendly</p>
-<p>✔ Notes, Lectures and Practice</p>
-<p>✔ Learn at Your Own Pace</p>
-<p>✔ Your Success is Our Mission 🚀</p>
+<section class="section" id="resources">
+    <div class="section-heading">
+        <h2>📚 Explore Our Resources</h2>
+        <p>Everything you need to learn, practice and excel.</p>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="🔍 Search notes, lectures, PYQs..." oninput="searchCards()">
+    </div>
+
+    <div class="cards" id="resourceCards">
+
+        <div class="card">
+            <div class="icon">📝</div>
+            <h3>Notes</h3>
+            <p>Well-organized notes for quick learning and revision.</p>
+            <a href="#">Explore Notes →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎥</div>
+            <h3>Video Lectures</h3>
+            <p>Understand concepts with engaging video lessons.</p>
+            <a href="#">Watch Lectures →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>Slides</h3>
+            <p>Presentation-style summaries for visual learners.</p>
+            <a href="#">Explore Slides →</a>
+        </div>
+
+        <div class="card" id="pyqs">
+            <div class="icon">📄</div>
+            <h3>Previous Year Questions</h3>
+            <p>Practice past questions and learn exam patterns.</p>
+            <a href="#">View PYQs →</a>
+        </div>
+
+        <div class="card" id="tests">
+            <div class="icon">✅</div>
+            <h3>Mock Tests</h3>
+            <p>Test your understanding and build confidence.</p>
+            <a href="#">Start Practice →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>E-Books</h3>
+            <p>Digital books and useful reading resources.</p>
+            <a href="#">Browse Books →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💡</div>
+            <h3>Study Tips</h3>
+            <p>Simple strategies to make study time effective.</p>
+            <a href="#">Learn More →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔔</div>
+            <h3>Updates</h3>
+            <p>Stay informed about new study resources.</p>
+            <a href="#">Stay Updated →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Student Community</h3>
+            <p>Learning is better when we grow together.</p>
+            <a href="#">Connect →</a>
+        </div>
+
+    </div>
 </section>
 
-<footer id="contact">
-<h3>🎓 NHSH – Learn • Practice • Excel</h3>
-<p>Learn Today... Lead Tomorrow!</p>
-<p>© 2026 NHSH | All Rights Reserved</p>
+<section class="section why" id="about">
+    <div class="section-heading">
+        <h2>Why Choose NHSH?</h2>
+        <p>Learning made simple.</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Free Resources</h3>
+            <p>Learn without limits using accessible study resources.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Organized Learning</h3>
+            <p>Find notes and learning material in one place.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Practice Focused</h3>
+            <p>Prepare smarter through questions and revision.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚀</div>
+            <h3>Your Own Pace</h3>
+            <p>Learn whenever you want, wherever you are.</p>
+        </div>
+    </div>
+
+    <div class="quote">
+        <h2>📖 Keep Curious. Keep Learning. Keep Growing.</h2>
+        <p>
+        "The beautiful thing about learning is that no one
+        can take it away from you."
+        <br><br>
+        Your goals. Your pace. Your future.
+        </p>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat">
+        <h2>∞</h2>
+        <p>Learning Opportunities</p>
+    </div>
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Learn at Your Pace</p>
+    </div>
+    <div class="stat">
+        <h2>1</h2>
+        <p>Learning Destination</p>
+    </div>
+    <div class="stat">
+        <h2>100%</h2>
+        <p>Student Focus</p>
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <div class="section-heading">
+        <h2>Join the NHSH Learning Community</h2>
+        <p>
+        Explore resources, practice consistently and
+        make every study session count.
+        </p>
+        <a href="#resources" class="btn">Explore Resources →</a>
+    </div>
+
+    <h2>Contact & Contributions</h2>
+    <p>
+    Want to share resources, suggest an idea or collaborate?
+    </p>
+    <p style="margin-top:15px">
+    📧 Email: hello@example.com
+    </p>
+</section>
+
+<footer>
+    <h3>📚 NHSH · Learn · Practice · Excel</h3>
+    <p>Learn Today... Lead Tomorrow!</p>
+    <p>© 2026 NHSH. Keep learning, keep growing.</p>
 </footer>
 
 <script>
 function searchCards(){
-let input=document.getElementById("search").value.toLowerCase();
-let cards=document.querySelectorAll(".card");
-cards.forEach(card=>{
-let text=card.innerText.toLowerCase();
-card.style.display=text.includes(input)?"block":"none";
-});
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll("#resourceCards .card");
+
+    cards.forEach(function(card){
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "" : "none";
+    });
 }
 </script>
 
