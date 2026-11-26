@@ -474,6 +474,22 @@ function searchCards(){
         card.style.display = text.includes(input) ? "" : "none";
     });
 }
+    function openSlide(file){
+    let viewer = document.getElementById("slideViewer");
+    let frame = document.getElementById("pdfFrame");
+    let title = document.getElementById("slideTitle");
+    let download = document.getElementById("downloadPDF");
+
+    frame.src = file + "#toolbar=1&navpanes=0";
+    download.href = file;
+    title.innerText = "PDF Slides";
+    viewer.style.display = "block";
+
+    viewer.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
+}
 </script>
 
 </body>
