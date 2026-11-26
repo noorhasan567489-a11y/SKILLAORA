@@ -3,241 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NHSH | Smart Learning</title>
+<title>SKILLAORA | Education Platform</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-    scroll-behavior:smooth;
-}
-body{
-    background:#f5f8ff;
-    color:#172554;
-}
-header{
-    background:#071a45;
-    color:white;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
-.logo{
-    font-size:27px;
-    font-weight:bold;
-}
-.logo span{color:#ffc928}
-nav{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f4f7fc;color:#172554}
+header{background:#071a45;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:28px;font-weight:bold;color:#ffc928}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold;font-size:14px}
 nav a:hover{color:#ffc928}
-
-.hero{
-    background:linear-gradient(135deg,#071a45,#1268ee);
-    color:white;
-    padding:90px 8%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
-    flex-wrap:wrap;
-}
-.hero-text{
-    flex:1;
-    min-width:280px;
-}
-.hero-text h1{
-    font-size:48px;
-    line-height:1.2;
-    margin:15px 0;
-}
-.hero-text h1 span{color:#ffc928}
-.hero-text p{
-    font-size:17px;
-    line-height:1.8;
-    color:#e0eaff;
-}
-.tag{
-    display:inline-block;
-    background:#ffffff20;
-    padding:10px 18px;
-    border-radius:30px;
-    color:#ffc928;
-}
-.btn{
-    display:inline-block;
-    background:#ffc928;
-    color:#071a45;
-    padding:15px 25px;
-    margin-top:25px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-.btn:hover{transform:scale(1.05)}
-.hero-art{
-    flex:1;
-    min-width:280px;
-    max-width:450px;
-    background:white;
-    border-radius:30px;
-    padding:30px;
-    color:#071a45;
-    text-align:center;
-    box-shadow:0 20px 50px #0003;
-}
-.hero-art .big{font-size:90px}
-.hero-art h2{margin:15px}
-.hero-art p{color:#64748b;line-height:1.7}
-.hero-art .mini{
-    display:flex;
-    gap:10px;
-    margin-top:20px;
-}
-.mini div{
-    background:#eef4ff;
-    padding:15px;
-    flex:1;
-    border-radius:15px;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-    gap:20px;
-    padding:35px 8%;
-}
-.stat{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 5px 20px #00000008;
-}
-.stat h2{color:#1268ee;font-size:28px}
-.stat p{margin-top:8px;color:#64748b}
-
-.section{
-    padding:65px 8%;
-}
-.section-heading{
-    text-align:center;
-    margin-bottom:35px;
-}
-.section-heading h2{
-    font-size:35px;
-    margin-bottom:12px;
-}
-.section-heading p{color:#64748b}
-
-.search-box{
-    max-width:600px;
-    margin:0 auto 35px;
-}
-.search-box input{
-    width:100%;
-    padding:16px 20px;
-    border:2px solid #e0e7ff;
-    border-radius:30px;
-    outline:none;
-    font-size:16px;
-}
-.search-box input:focus{border-color:#1268ee}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:22px;
-}
-.card{
-    background:white;
-    border-radius:22px;
-    padding:28px;
-    border:1px solid #e8edfa;
-    box-shadow:0 10px 25px #00000008;
-    transition:.3s;
-}
-.card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 15px 30px #1268ee15;
-}
-.icon{
-    width:65px;
-    height:65px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:32px;
-    background:#eaf1ff;
-}
-.card h3{margin:18px 0 10px;font-size:22px}
-.card p{color:#64748b;line-height:1.7}
-.card a{
-    display:inline-block;
-    margin-top:20px;
-    color:#1268ee;
-    text-decoration:none;
-    font-weight:bold;
-}
-.card a:hover{color:#071a45}
-
-.why{
-    background:#071a45;
-    color:white;
-}
-.why .section-heading p{color:#d1dcf8}
-.why .card{background:#102858;border:1px solid #263e70}
-.why .card h3{color:#ffc928}
-.why .card p{color:#d1dcf8}
-
-.quote{
-    background:#eaf1ff;
-    border-radius:25px;
-    padding:45px;
-    text-align:center;
-    margin-top:30px;
-}
-.quote h2{font-size:28px;margin-bottom:15px}
-.quote p{color:#64748b;line-height:1.8}
-
-.contact{
-    background:#ffffff;
-    text-align:center;
-}
-.contact p{
-    color:#64748b;
-    line-height:1.8;
-}
-footer{
-    background:#03112e;
-    color:white;
-    padding:30px 8%;
-    text-align:center;
-}
+.hero{background:linear-gradient(120deg,#071a45,#174ea6);color:white;text-align:center;padding:85px 20px}
+.hero h1{font-size:45px;margin-bottom:15px}
+.hero h1 span{color:#ffc928}
+.hero p{margin-bottom:25px;font-size:17px}
+.search{width:min(600px,95%);padding:15px;border:0;border-radius:8px;font-size:16px}
+.btn{display:inline-block;padding:12px 20px;background:#ffc928;color:#071a45;border-radius:7px;text-decoration:none;font-weight:bold;margin:8px;border:0;cursor:pointer}
+.container{padding:55px 7%}
+.heading{text-align:center;margin-bottom:30px}
+.heading h2{font-size:30px;margin-bottom:10px}
+.heading p{color:#64748b}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;background:white;padding:25px 6%;text-align:center}
+.stats h2{font-size:28px}
+.stats p{color:#64748b;margin-top:6px}
+.categories,.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.category,.card{background:white;border-radius:12px;padding:23px;border:1px solid #e5eaf4;box-shadow:0 3px 12px #0000000a}
+.category{text-align:center;cursor:pointer}
+.category:hover,.card:hover{transform:translateY(-3px)}
+.emoji,.card-icon{font-size:36px;margin-bottom:12px}
+.category h3,.card h3{margin-bottom:10px}
+.category p,.card p{color:#64748b;font-size:14px;line-height:1.5;margin-bottom:15px}
+.resources{background:white}
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:25px}
+.filters button{padding:10px 16px;border:0;border-radius:7px;background:#e5edfb;color:#071a45;font-weight:bold;cursor:pointer}
+.filters button.active,.filters button:hover{background:#071a45;color:white}
+.card-actions{display:flex;gap:8px;flex-wrap:wrap}
+.card-actions a{background:#071a45;color:white;text-decoration:none;padding:10px 13px;border-radius:6px;font-size:13px}
+.card-actions .download{background:#ffc928;color:#071a45}
+.empty{display:none;text-align:center;padding:25px;color:#64748b}
+.viewer{display:none;background:#f4f7fc;padding:20px;margin-top:30px;border-radius:12px}
+.viewer-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.viewer iframe{width:100%;height:650px;border:1px solid #ddd;margin-top:20px;background:white}
+.viewer img{max-width:100%;max-height:650px;display:block;margin:20px auto}
+.viewer video{max-height:650px;margin-top:20px}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.about-box{background:white;padding:25px;border-radius:12px;line-height:1.7}
+.contact{text-align:center;background:#e8efff}
+footer{background:#071a45;color:white;text-align:center;padding:35px 15px}
 footer p{margin-top:10px;color:#cbd5e1}
-
-@media(max-width:700px){
-    header{justify-content:center;text-align:center}
-    nav{justify-content:center}
-    .hero{text-align:center;padding:60px 6%}
-    .hero-text h1{font-size:36px}
-    .hero-art{margin:auto}
-    .section{padding:50px 6%}
-    .section-heading h2{font-size:28px}
+footer a{color:#ffc928}
+@media(max-width:650px){
+header{justify-content:center}
+nav{justify-content:center;gap:12px}
+.hero h1{font-size:32px}
+.container{padding:40px 5%}
+.viewer iframe{height:450px}
 }
 </style>
 </head>
@@ -245,255 +66,358 @@ footer p{margin-top:10px;color:#cbd5e1}
 <body>
 
 <header>
-    <div class="logo">📚 NHSH<span>.</span></div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#resources">Study Material</a>
-        <a href="#pyqs">PYQs</a>
-        <a href="#tests">Mock Tests</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<a href="#home" class="logo">SKILLAORA</a>
+<nav>
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#resources">Study Material</a>
+<a href="#resources" onclick="filterCategory('Slides')">Slides</a>
+<a href="#resources" onclick="filterCategory('PYQs')">PYQs</a>
+<a href="#tests">Mock Tests</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero" id="home">
-    <div class="hero-text">
-        <div class="tag">✦ STUDY SMART. DREAM BIG.</div>
-        <h1>Smart Learning,<br><span>Bright Future.</span></h1>
-        <p>
-        Your one-stop destination for notes, video lectures,
-        slides, previous-year questions, mock tests and much more.
-        Learn at your own pace, anytime, anywhere.
-        </p>
-        <a href="#resources" class="btn">🚀 Start Learning Free</a>
-    </div>
-
-    <div class="hero-art">
-        <div class="big">🎓</div>
-        <h2>Why NHSH?</h2>
-        <p>Small steps every day lead to big success!</p>
-        <div class="mini">
-            <div>📚<br><b>Learn</b></div>
-            <div>✏️<br><b>Practice</b></div>
-            <div>🏆<br><b>Excel</b></div>
-        </div>
-    </div>
+<h1>Welcome to <span>SKILLAORA</span></h1>
+<p>Your Complete Educational Learning Platform</p>
+<input class="search" id="search" type="search" placeholder="Search PDF, Notes, Slides, PYQs..." oninput="renderFiles()">
+<br>
+<a href="#resources" class="btn">Explore Resources</a>
+<a href="#categories" class="btn">Browse Categories</a>
 </section>
 
-<section class="stats">
-    <div class="stat">
-        <h2>⚡ Free</h2>
-        <p>Learning Resources</p>
-    </div>
-    <div class="stat">
-        <h2>▶️ Easy</h2>
-        <p>Learning Experience</p>
-    </div>
-    <div class="stat">
-        <h2>⬇️ Anytime</h2>
-        <p>Study Anywhere</p>
-    </div>
-    <div class="stat">
-        <h2>🎓 All</h2>
-        <p>Types of Learners</p>
-    </div>
+<div class="stats">
+<div><h2>📚</h2><p>Study Materials</p></div>
+<div><h2>📝</h2><p>Previous Papers</p></div>
+<div><h2>🎥</h2><p>Video Learning</p></div>
+<div><h2>🎯</h2><p>Smart Preparation</p></div>
+</div>
+
+<section class="container" id="categories">
+<div class="heading">
+<h2>Explore Categories</h2>
+<p>Choose your learning category</p>
+</div>
+
+<div class="categories">
+<div class="category" onclick="filterCategory('PDF')">
+<div class="emoji">📕</div>
+<h3>PDF Notes</h3>
+<p>Study notes and books</p>
+</div>
+
+<div class="category" onclick="filterCategory('Slides')">
+<div class="emoji">📊</div>
+<h3>Slides</h3>
+<p>Presentations</p>
+</div>
+
+<div class="category" onclick="filterCategory('PYQs')">
+<div class="emoji">📝</div>
+<h3>PYQs</h3>
+<p>Previous year papers</p>
+</div>
+
+<div class="category" onclick="filterCategory('Documents')">
+<div class="emoji">📄</div>
+<h3>Documents</h3>
+<p>Learning documents</p>
+</div>
+
+<div class="category" onclick="filterCategory('Images')">
+<div class="emoji">🖼️</div>
+<h3>Images</h3>
+<p>Diagrams and pictures</p>
+</div>
+
+<div class="category" onclick="filterCategory('Videos')">
+<div class="emoji">🎬</div>
+<h3>Videos</h3>
+<p>Video lectures</p>
+</div>
+</div>
 </section>
 
-<section class="section" id="resources">
-    <div class="section-heading">
-        <h2>📚 Explore Our Resources</h2>
-        <p>Everything you need to learn, practice and excel.</p>
-    </div>
+<section class="container resources" id="resources">
+<div class="heading">
+<h2>Study Resources</h2>
+<p>Find and access your learning materials</p>
+</div>
 
-    <div class="search-box">
-        <input type="text" id="search" placeholder="🔍 Search notes, lectures, PYQs..." oninput="searchCards()">
-    </div>
+<div class="filters">
+<button class="active" onclick="filterCategory('All',this)">All</button>
+<button onclick="filterCategory('PDF',this)">PDF</button>
+<button onclick="filterCategory('Slides',this)">Slides</button>
+<button onclick="filterCategory('PYQs',this)">PYQs</button>
+<button onclick="filterCategory('Documents',this)">Documents</button>
+<button onclick="filterCategory('Images',this)">Images</button>
+<button onclick="filterCategory('Videos',this)">Videos</button>
+</div>
 
-    <div class="cards" id="resourceCards">
+<div class="cards" id="resourceCards"></div>
+<div class="empty" id="empty">No files found.</div>
 
-        <div class="card">
-            <div class="icon">📝</div>
-            <h3>Notes</h3>
-            <p>Well-organized notes for quick learning and revision.</p>
-            <a href="#">Explore Notes →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">🎥</div>
-            <h3>Video Lectures</h3>
-            <p>Understand concepts with engaging video lessons.</p>
-            <a href="#">Watch Lectures →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">📊</div>
-            <h3>Slides</h3>
-            <p>Presentation-style summaries for visual learners.</p>
-            <a href="<a href="#slides">Explore Slides →</a>" target="_blank">Explore Slides →</a>
-        </div>
-
-        <div class="card" id="pyqs">
-            <div class="icon">📄</div>
-            <h3>Previous Year Questions</h3>
-            <p>Practice past questions and learn exam patterns.</p>
-            <a href="#">View PYQs →</a>
-        </div>
-
-        <div class="card" id="tests">
-            <div class="icon">✅</div>
-            <h3>Mock Tests</h3>
-            <p>Test your understanding and build confidence.</p>
-            <a href="#">Start Practice →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">📚</div>
-            <h3>E-Books</h3>
-            <p>Digital books and useful reading resources.</p>
-            <a href="#">Browse Books →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">💡</div>
-            <h3>Study Tips</h3>
-            <p>Simple strategies to make study time effective.</p>
-            <a href="#">Learn More →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">🔔</div>
-            <h3>Updates</h3>
-            <p>Stay informed about new study resources.</p>
-            <a href="#">Stay Updated →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">🤝</div>
-            <h3>Student Community</h3>
-            <p>Learning is better when we grow together.</p>
-            <a href="#">Connect →</a>
-        </div>
-
-    </div>
+<div class="viewer" id="viewer">
+<div class="viewer-top">
+<h2 id="viewerTitle">File Preview</h2>
+<div class="card-actions">
+<a href="#" id="downloadLink" class="download" download>Download</a>
+<a href="#" onclick="closeViewer();return false">Close</a>
+</div>
+</div>
+<div id="viewerContent"></div>
+</div>
 </section>
 
-<section class="section why" id="about">
-    <div class="section-heading">
-        <h2>Why Choose NHSH?</h2>
-        <p>Learning made simple.</p>
-    </div>
+<section class="container" id="tests">
+<div class="heading">
+<h2>Mock Tests</h2>
+<p>Practice and improve your preparation</p>
+</div>
 
-    <div class="cards">
-        <div class="card">
-            <div class="icon">⚡</div>
-            <h3>Free Resources</h3>
-            <p>Learn without limits using accessible study resources.</p>
-        </div>
+<div class="cards">
+<div class="card">
+<div class="card-icon">🎯</div>
+<h3>Online Practice</h3>
+<p>Add your online test link here.</p>
+<a href="#contact" class="btn">Explore</a>
+</div>
 
-        <div class="card">
-            <div class="icon">📚</div>
-            <h3>Organized Learning</h3>
-            <p>Find notes and learning material in one place.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🎯</div>
-            <h3>Practice Focused</h3>
-            <p>Prepare smarter through questions and revision.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🚀</div>
-            <h3>Your Own Pace</h3>
-            <p>Learn whenever you want, wherever you are.</p>
-        </div>
-    </div>
-
-    <div class="quote">
-        <h2>📖 Keep Curious. Keep Learning. Keep Growing.</h2>
-        <p>
-        "The beautiful thing about learning is that no one
-        can take it away from you."
-        <br><br>
-        Your goals. Your pace. Your future.
-        </p>
-    </div>
+<div class="card">
+<div class="card-icon">📋</div>
+<h3>Previous Questions</h3>
+<p>Practice previous year questions.</p>
+<a href="#resources" class="btn">Explore PYQs</a>
+</div>
+</div>
 </section>
 
-<section class="stats">
-    <div class="stat">
-        <h2>∞</h2>
-        <p>Learning Opportunities</p>
-    </div>
-    <div class="stat">
-        <h2>24/7</h2>
-        <p>Learn at Your Pace</p>
-    </div>
-    <div class="stat">
-        <h2>1</h2>
-        <p>Learning Destination</p>
-    </div>
-    <div class="stat">
-        <h2>100%</h2>
-        <p>Student Focus</p>
-    </div>
+<section class="container" id="about">
+<div class="heading">
+<h2>About SKILLAORA</h2>
+<p>Education and learning resources in one place</p>
+</div>
+
+<div class="about-grid">
+<div class="about-box">
+<h3>Our Mission</h3>
+<p>SKILLAORA aims to make educational resources easy to find and access. Students can explore study materials, presentations, previous year papers and learning resources in one place.</p>
+</div>
+
+<div class="about-box">
+<h3>Our Services</h3>
+<p>Study materials, PDF previews, downloadable files, video links and a simple search experience for learners.</p>
+</div>
+</div>
 </section>
 
-<section class="section contact" id="contact">
-    <div class="section-heading">
-        <h2>Join the NHSH Learning Community</h2>
-        <p>
-        Explore resources, practice consistently and
-        make every study session count.
-        </p>
-        <a href="#resources" class="btn">Explore Resources →</a>
-    </div>
-
-    <h2>Contact & Contributions</h2>
-    <p>
-    Want to share resources, suggest an idea or collaborate?
-    </p>
-    <p style="margin-top:15px">
-    📧 Email: hello@example.com
-    </p>
+<section class="container contact" id="contact">
+<div class="heading">
+<h2>Contact Us</h2>
+<p>Have a question or suggestion? Contact us.</p>
+</div>
+<a href="mailto:YOUR-EMAIL@example.com" class="btn">Send Email</a>
 </section>
 
 <footer>
-    <h3>📚 NHSH · Learn · Practice · Excel</h3>
-    <p>Learn Today... Lead Tomorrow!</p>
-    <p>© 2026 NHSH. Keep learning, keep growing.</p>
+<div class="logo">SKILLAORA</div>
+<p>Learn • Practice • Grow</p>
+<p>© 2026 SKILLAORA. All Rights Reserved.</p>
+<p><a href="#home">Back to Top ↑</a></p>
 </footer>
 
 <script>
-function searchCards(){
-    let input = document.getElementById("search").value.toLowerCase();
-    let cards = document.querySelectorAll("#resourceCards .card");
 
-    cards.forEach(function(card){
-        let text = card.innerText.toLowerCase();
-        card.style.display = text.includes(input) ? "" : "none";
-    });
+// ======================================
+// WEBSITE FILE DATABASE
+// ADD NEW FILES IN THIS FORMAT
+// ======================================
+
+const FILES = [
+
+{
+name: "BAFL PYQs 2016-17",
+category: "PYQs",
+file: "bafl-2016-17.pdf",
+description: "Previous Year Question Paper"
+},
+
+{
+name: "BAFL PYQs 2017-18",
+category: "PYQs",
+file: "bafl-2017-18.pdf",
+description: "Previous Year Question Paper"
+},
+
+{
+name: "Biology Chapter 1",
+category: "PDF",
+file: "biology-chapter-1.pdf",
+description: "Biology Notes"
 }
-    function openSlide(file){
-    let viewer = document.getElementById("slideViewer");
-    let frame = AF BAFL PYQS (2016-17).pdf
-    let title = document.getElementById("slideTitle");
-    let download = AF BAFL PYQS (2016-17).pdf
 
-    frame.src = file + "#toolbar=1&navpanes=0";
-    download.href = file;
-    title.innerText = "PDF Slides";
-    viewer.style.display = "block";
+];
 
-    viewer.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-    });
+let selectedCategory = "All";
+
+function getIcon(category){
+const icons = {
+PDF:"📕",
+Slides:"📊",
+PYQs:"📝",
+Documents:"📄",
+Images:"🖼️",
+Videos:"🎬"
+};
+return icons[category] || "📁";
 }
+
+function renderFiles(){
+
+const search = document.getElementById("search").value.toLowerCase();
+const cards = document.getElementById("resourceCards");
+
+cards.innerHTML = "";
+let count = 0;
+
+FILES.forEach((item,index)=>{
+
+const text = (item.name+" "+item.category+" "+item.description).toLowerCase();
+
+if(!text.includes(search)) return;
+if(selectedCategory !== "All" && item.category !== selectedCategory) return;
+
+count++;
+
+const card = document.createElement("div");
+card.className = "card";
+
+const icon = document.createElement("div");
+icon.className = "card-icon";
+icon.textContent = getIcon(item.category);
+
+const title = document.createElement("h3");
+title.textContent = item.name;
+
+const desc = document.createElement("p");
+desc.textContent = item.description || item.category;
+
+const actions = document.createElement("div");
+actions.className = "card-actions";
+
+const open = document.createElement("a");
+open.href = "#viewer";
+open.textContent = "Open File";
+open.addEventListener("click",()=>openFile(index));
+
+const download = document.createElement("a");
+download.href = item.file;
+download.download = "";
+download.className = "download";
+download.textContent = "Download";
+
+actions.append(open,download);
+card.append(icon,title,desc,actions);
+cards.appendChild(card);
+
+});
+
+document.getElementById("empty").style.display = count ? "none" : "block";
+
+}
+
+function filterCategory(category,button){
+
+selectedCategory = category;
+
+document.querySelectorAll(".filters button").forEach(btn=>{
+btn.classList.remove("active");
+});
+
+if(button){
+button.classList.add("active");
+}
+else{
+document.querySelectorAll(".filters button").forEach(btn=>{
+if(btn.textContent === category) btn.classList.add("active");
+});
+}
+
+renderFiles();
+document.getElementById("resources").scrollIntoView({behavior:"smooth"});
+
+}
+
+function openFile(index){
+
+const item = FILES[index];
+const viewer = document.getElementById("viewer");
+const content = document.getElementById("viewerContent");
+
+document.getElementById("viewerTitle").textContent = item.name;
+
+const download = document.getElementById("downloadLink");
+download.href = item.file;
+download.download = item.file.split("/").pop();
+
+content.innerHTML = "";
+
+const ext = item.file.split(".").pop().toLowerCase();
+
+if(ext === "pdf"){
+
+const frame = document.createElement("iframe");
+frame.src = item.file;
+frame.title = item.name;
+content.appendChild(frame);
+
+}
+
+else if(["jpg","jpeg","png","webp","gif"].includes(ext)){
+
+const img = document.createElement("img");
+img.src = item.file;
+img.alt = item.name;
+content.appendChild(img);
+
+}
+
+else if(["mp4","webm"].includes(ext)){
+
+const video = document.createElement("video");
+video.src = item.file;
+video.controls = true;
+video.style.width = "100%";
+content.appendChild(video);
+
+}
+
+else{
+
+const message = document.createElement("p");
+message.style.padding = "25px";
+message.textContent = "Preview is not available for this file type. Please download the file.";
+content.appendChild(message);
+
+}
+
+viewer.style.display = "block";
+viewer.scrollIntoView({behavior:"smooth"});
+
+}
+
+function closeViewer(){
+
+document.getElementById("viewer").style.display = "none";
+document.getElementById("viewerContent").innerHTML = "";
+
+}
+
+renderFiles();
+
 </script>
 
 </body>
 </html>
-<a href="bafl-2017-18.pdf" target="_blank">BAFL PYQs 2017-18</a>
-
-<a href="bafl-2016-17.pdf" target="_blank">BAFL PYQs 2016-17</a>
