@@ -112,12 +112,7 @@ nav{justify-content:center;gap:12px}
 <div class="emoji">📊</div>
 <h3>Slides</h3>
 <p>Presentations</p>
-</div> {
-  name: "AF BAFL PYQs (2018-19)",
-  category: "PDF",
-  file: "AF BAFL PYQS (2018 - 19).pdf",
-  description: "AF BAFL Previous Year Question Paper"
-},
+</div>
 
 <div class="category" onclick="filterCategory('PYQs')">
 <div class="emoji">📝</div>
@@ -246,9 +241,7 @@ const FILES = [
   category: "PDF",
   file: "AF BAFL PYQS (2018 - 19).pdf",
   description: "AF BAFL Previous Year Question Paper"
-},
-
-},
+}
 ];
 
 let selectedCategory = "All";
@@ -301,7 +294,7 @@ actions.className = "card-actions";
 const open = document.createElement("a");
 open.href = "#viewer";
 open.textContent = "Open File";
-open.addEventListener("click",()=>openFile(index));
+open.addEventListener("click",(e)=>{e.preventDefault();openFile(index);});
 
 const download = document.createElement("a");
 download.href = item.file;
